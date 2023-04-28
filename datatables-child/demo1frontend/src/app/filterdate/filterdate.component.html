@@ -1,0 +1,63 @@
+<div class="container border border-danger">
+  <div class="row my-3">
+    <div class="col-lg-4">
+      <h3> Dinh dang hien tai : {{mo}}</h3>
+    </div>
+    <div class="col-lg-4">
+      <h3> Dinh dang Date 1 : {{date1}}</h3>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-lg-6">
+      <label for="date1">Từ ngày :</label>
+      <input type="date" id="date1" name="date1" [(ngModel)]="date1" />
+    </div>
+    <div class="col-lg-6">
+      <label for="date2">Đến ngày :</label>
+      <input type="date" id="date2" name="date2" [(ngModel)]="date2" />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-lg-4">
+      <h3>Từ ngày : {{ date1 | date: 'yyyy-MM-ddTHH:mm:ss' }}</h3>
+    </div>
+    <div class="col-lg-4">
+      <h3>Đến ngày : {{ date2 | date: 'yyyy-MM-ddTHH:mm:ss' }}</h3>
+    </div>
+
+  </div>
+  <!--<div class="row">
+    <div class="col-lg-3">
+      <button class="btn btn-danger mb-2" (click)="getAll()">Tính toán</button>
+    </div>
+    <div class="col-lg-3">
+      <h3> Kết quả: {{Days}}</h3>
+    </div>
+  </div>-->
+  <div class="row my-3">
+    <div class="col-12">
+      <table class="table shadow table-hover table-dark rounded" *ngIf="!isLoading && allCurrent">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">STT</th>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">Tem</th>
+            <th scope="col">Hum</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center " *ngFor="let pullcurrent of allCurrent; let i = index;">
+            <td>{{ i + 1 }}</td>
+            <td>{{ pullcurrent.id}}</td>
+            <td>{{ pullcurrent.name}}</td>
+            <td>{{ pullcurrent.temperatureC}}</td>
+            <td>{{ pullcurrent.humidity}}</td>
+            <td>{{ pullcurrent.createdDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

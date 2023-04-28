@@ -1,0 +1,114 @@
+
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Data Tables</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Get</li>
+      </ol>
+    </nav>
+  </div>
+  <section class="section ">
+
+    <!--<div class="row my-5 justify-content-center">
+    <div *ngIf="isLoading" class="spinner-grow text-danger" role="status"></div>-->
+    <div class="container-fluid bg-image">
+      <div class="row my-3">
+        <div class="col-auto">
+          <a class="btn btn-secondary" href="/test-data" role="button">Test Data</a>
+        </div>
+      </div>
+      <div class="my-3">
+        <form [formGroup]="signInForm" (ngSubmit)="getAll()">
+          <input type="text" formControlName="value" placeholder="Enter Fields">
+          <button type="submit">Get Data</button>
+        </form>
+      </div>
+     
+
+      <div class="row justify-content-center ">
+        <div class="col-3 ">
+          <div class="spinner-border text-light mx-5" style="width: 2rem; height: 2rem;" role="status" *ngIf="isLoading">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" [hidden]="!allCurrent">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center"><b>TABLE OF DTSU666 VALUES</b></h5>
+              <table class="table shadow table-hover table-dark rounded" *ngIf="!isLoading && allCurrent">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">STT</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">A_sum</th>
+                    <th scope="col">A_imp</th>
+                    <th scope="col">A_exp</th>
+                    <th scope="col">Ua</th>
+                    <th scope="col">Ub</th>
+                    <th scope="col">Uc</th>
+                    <th scope="col">Ia</th>
+                    <th scope="col">Ib</th>
+                    <th scope="col">Ic</th>
+                    <th scope="col">Pt</th>
+                    <th scope="col">Pa</th>
+                    <th scope="col">Pb</th>
+                    <th scope="col">Pc</th>
+                    <th scope="col">Ft</th>
+                    <th scope="col">Fa</th>
+                    <th scope="col">Fb</th>
+                    <th scope="col">Fc</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center " *ngFor="let pullcurrent of allCurrent; let i = index;">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ pullcurrent.Name}}</td>
+                    <td>{{ pullcurrent.A_sum}}</td>
+                    <td>{{ pullcurrent.A_imp}}</td>
+                    <td>{{ pullcurrent.A_exp}}</td>
+                    <td>{{ pullcurrent.Ua}}</td>
+                    <td>{{ pullcurrent.Ub}}</td>
+                    <td>{{ pullcurrent.Uc}}</td>
+                    <td>{{ pullcurrent.Ia}}</td>
+                    <td>{{ pullcurrent.Ib}}</td>
+                    <td>{{ pullcurrent.Ic}}</td>
+                    <td>{{ pullcurrent.Pt}}</td>
+                    <td>{{ pullcurrent.Pa}}</td>
+                    <td>{{ pullcurrent.Pb}}</td>
+                    <td>{{ pullcurrent.Pc}}</td>
+                    <td>{{ pullcurrent.Ft}}</td>
+                    <td>{{ pullcurrent.Fa}}</td>
+                    <td>{{ pullcurrent.Fb}}</td>
+                    <td>{{ pullcurrent.Fc}}</td>
+                    <td>
+                      <div class="row  justify-content-arounded">
+                        <div class="col ">
+                          {{ pullcurrent.Date | date:'dd/MM/yyyy, HH:mm:ss  a' }}
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-5 justify-content-center">
+        <div class="col-auto">
+          <div *ngIf="!isLoading && !allCurrent" class="alert alert-danger" role="alert">
+            <p><i>There was an error loading the health check results. Please check your network connection and try again.</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

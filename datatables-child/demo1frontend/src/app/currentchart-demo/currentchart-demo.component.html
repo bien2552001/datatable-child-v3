@@ -1,0 +1,95 @@
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col">
+      <a class="btn btn-primary" href="/test-currentchart" role="button">Post</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Current Chart</h5>
+          <mat-tab-group animationDuration="0ms">
+            <mat-tab label="1 Day">
+                <apx-chart style="width:98%;display: block;"
+                           [series]="chartOptions.series"
+                           [chart]="chartOptions.chart"
+                           [xaxis]="chartOptions.xaxis"
+                           [yaxis]="chartOptions.yaxis"
+                           [stroke]="chartOptions.stroke"
+                           [tooltip]="chartOptions.tooltip"
+                           [dataLabels]="chartOptions.dataLabels"
+                           [markers]="chartOptions.markers"
+                           [colors]="chartOptions.colors">
+                </apx-chart>
+            </mat-tab>
+            <mat-tab label="1 Week">
+                <apx-chart style="width:98%;display: block;"
+                           [series]="chartOptions1.series"
+                           [chart]="chartOptions1.chart"
+                           [xaxis]="chartOptions1.xaxis"
+                           [yaxis]="chartOptions1.yaxis"
+                           [stroke]="chartOptions1.stroke"
+                           [tooltip]="chartOptions1.tooltip"
+                           [dataLabels]="chartOptions1.dataLabels"
+                           [markers]="chartOptions1.markers"
+                           [colors]="chartOptions1.colors">
+                </apx-chart>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="row my-5">
+    <div class="col-10 my-5">
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="1 Day">
+          <div id="chartArea">
+            <apx-chart style="width: 100%; display: block;"
+                       [series]="chartOptions.series"
+                       [chart]="chartOptions.chart"
+                       [xaxis]="chartOptions.xaxis"
+                       [yaxis]="chartOptions.yaxis"
+                       [stroke]="chartOptions.stroke"
+                       [tooltip]="chartOptions.tooltip"
+                       [dataLabels]="chartOptions.dataLabels"
+                       [markers]="chartOptions.markers"
+                       [colors]="chartOptions.colors"></apx-chart>
+          </div>
+        </mat-tab>-->
+  <!--<mat-tab label="1 Week">
+    <div id="chartArea">
+      <apx-chart style="width: 100%; display: block;"
+                 [series]="chartOptions1.series"
+                 [chart]="chartOptions1.chart"
+                 [xaxis]="chartOptions1.xaxis"
+                 [yaxis]="chartOptions1.yaxis"
+                 [stroke]="chartOptions1.stroke"
+                 [tooltip]="chartOptions1.tooltip"
+                 [dataLabels]="chartOptions1.dataLabels"
+                 [markers]="chartOptions1.markers"
+                 [colors]="chartOptions1.colors"></apx-chart>
+    </div>
+  </mat-tab>
+  <mat-tab label="1 Month">
+    <div id="chartArea">
+      <apx-chart style="width: 100%; display: block;"
+                 [series]="chartOptions2.series"
+                 [chart]="chartOptions2.chart"
+                 [xaxis]="chartOptions2.xaxis"
+                 [yaxis]="chartOptions2.yaxis"
+                 [stroke]="chartOptions2.stroke"
+                 [tooltip]="chartOptions2.tooltip"
+                 [dataLabels]="chartOptions2.dataLabels"
+                 [markers]="chartOptions2.markers"
+                 [colors]="chartOptions2.colors"></apx-chart>
+    </div>
+  </mat-tab>-->
+  <!--</mat-tab-group>
+    </div>
+  </div>-->
+</div>
+
+

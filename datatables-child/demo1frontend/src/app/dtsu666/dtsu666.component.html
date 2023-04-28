@@ -1,0 +1,125 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Energy Dashboard</h1>
+  </div>
+  <section class="section dashboard">
+    <div class="row m-2">
+      <div class="col-xl-12 col-md-7 col-sm-12 my-3">
+        <nav>
+          <div class="nav nav-tabs buttonwrapper" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="today" data-bs-toggle="tab" data-bs-target="#nav-day" type="button" role="tab" aria-controls="nav-day" aria-selected="true" onclick="onTodayButtonClick()">TODAY</button>
+            <button class="nav-link " id="week" data-bs-toggle="tab" data-bs-target="#nav-week" type="button" role="tab" aria-controls="nav-week" aria-selected="false" onclick="onWeekButtonClick()">WEEK</button>
+            <button class="nav-link " id="month" data-bs-toggle="tab" data-bs-target="#nav-month" type="button" role="tab" aria-controls="nav-month" aria-selected="false" onclick="onMonthButtonClick()">MONTH</button>
+            <button class="nav-link " id="year" data-bs-toggle="tab" data-bs-target="#nav-year" type="button" role="tab" aria-controls="nav-year" aria-selected="false" onclick="onYearButtonClick()">YEAR</button>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-5 date-indicator" id="date">Date</div>
+
+      <div class="tab-content" id="nav-tabContent">
+        <!---------------------------------------------Today---------------------------------------->
+        <div class="tab-pane fade show active today-content" id="nav-day" role="tabpanel" aria-labelledby="today">
+          <div class="row mt-3 db-chart">
+            <app-today></app-today>
+            <app-week></app-week>
+          </div>
+        </div>
+        <!---------------------------------------------Week---------------------------------------->
+        <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="week">
+          weekkkkkkkkkkk
+          <div class="row mt-3 ">
+            <div class="col-12">
+              <div class="card">
+                <div class="col-12">
+                  <app-today></app-today>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------Month---------------------------------------->
+        <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="month">
+          monthhhhhhhhhhhhhhh
+          <div class="card">
+            <div class="col-12">
+              <app-week></app-week>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------Year---------------------------------------->
+        <div class="tab-pane fade" id="nav-year" role="tabpanel" aria-labelledby="year">
+          yearrrrrr
+          <div class="col-12">
+              <app-today></app-today>
+              <app-week></app-week>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+
+<!--<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Energy Dashboard</h1>
+  </div>
+  <section class="section dashboard">
+    <div class="row m-2 ">
+      <div class="col-xl-7 col-md-7 col-sm-12 my-3">
+        <nav>
+          <div class="nav nav-tabs buttonwrapper" id="nav-tab" role="tablist"  (ngSubmit)="getAll()">
+            <button class="nav-link active" id="today" data-bs-toggle="tab" data-bs-target="#nav-day" type="button" role="tab" aria-controls="nav-day" aria-selected="true">TODAY</button>
+            <button class="nav-link" id="week" data-bs-toggle="tab" data-bs-target="#nav-week" type="button" role="tab" aria-controls="nav-week" aria-selected="false">WEEK</button>
+            <button class="nav-link" id="month" data-bs-toggle="tab" data-bs-target="#nav-month" type="button" role="tab" aria-controls="nav-month" aria-selected="false">MONTH</button>
+            <button class="nav-link" id="year" data-bs-toggle="tab" data-bs-target="#nav-year" type="button" role="tab" aria-controls="nav-year" aria-selected="false">YEAR</button>
+          </div>
+        </nav>
+      </div>
+      <div [ngClass]="'col-md-5 date-indicator'" id="date">Date</div>-->
+<!---------------------------------------------------------------------To Day------------------------------------------------------------------------------->
+<!--<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active today-content" id="nav-day" role="tabpanel" aria-labelledby="today">
+    <div className="row mt-3 db-chart">
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="card">
+            <app-today></app-today>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+<!---------------------------------------------------------------------Week------------------------------------------------------------------------------->
+<!--<div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="week">
+  weekkkkkkkkkkk
+  <div className="row mt-3 db-chart">
+    <div class="col-12">
+      <div class="card border">
+        <app-week></app-week>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!---------------------------------------------------------------------Month------------------------------------------------------------------------------->
+<!--<div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="month">
+  monthhhhhhhhhhhhhhh
+</div>-->
+<!---------------------------------------------------------------------Year------------------------------------------------------------------------------->
+<!--<div class="tab-pane fade" id="nav-year" role="tabpanel" aria-labelledby="year">
+          yearrrrrr
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>-->

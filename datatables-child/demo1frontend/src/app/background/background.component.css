@@ -1,0 +1,12 @@
+.container {
+  background-image: url('https://cdn.wallpapersafari.com/62/9/vQ5B4l.jpg');
+  background-size: 100% ;
+  width: 100%;
+  height: 600px;
+}
+
+  .container .row .col-1:hover {
+    background: #ffffff;
+    border-radius:7px;
+    opacity: 0.8;
+  }
